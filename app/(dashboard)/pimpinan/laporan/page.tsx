@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 export default function LaporanPimpinanPage() {
   const [jenisLaporan, setJenisLaporan] = useState("absensi");
-  const [periodeBulan, setPeriodeBulan] = useState("06-2026");
+  const [periodeBulan, setPeriodeBulan] = useState("2026-06");
   const [filterRegu, setFilterRegu] = useState("Semua Regu");
   const [isGenerating, setIsGenerating] = useState(false);
 
@@ -63,8 +63,8 @@ export default function LaporanPimpinanPage() {
                 <input 
                   type="month"
                   className="bg-surface-container border border-outline-variant/50 text-on-surface text-sm px-3 py-2 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
-                  value={"2026-06"}
-                  onChange={() => {}}
+                  value={periodeBulan}
+                  onChange={(e) => setPeriodeBulan(e.target.value)}
                 />
              </div>
 
